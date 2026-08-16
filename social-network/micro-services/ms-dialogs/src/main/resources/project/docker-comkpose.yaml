@@ -1,9 +1,0 @@
-services:
-
-  mc_dialogs:
-    image: "nikolaykarpov/mc_dialogs:2.0"
-    container_name: "mc_dialogs"
-    ports:
-      - 8077:8077
-    extra_hosts:
-      - "localhost:host-gateway"
