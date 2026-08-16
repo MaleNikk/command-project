@@ -1,0 +1,4 @@
+1. ms-front:3.0
+2. ms-gateway:3.0
+3. ms-geo:3.0
+4. ms-eureka:3.0

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="createTableRelationship" author="friends_db">
+        <createTable tableName="relationship">
+            <column name="id" type="VARCHAR(100) NOT NULL">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="status_code" type="VARCHAR(15) NOT NULL"/>
+            <column name="friend_id" type="VARCHAR(100) NOT NULL"/>
+            <column name="previous_status_code" type="VARCHAR(15) NOT NULL"/>
+            <column name="rating" type="INT DEFAULT 0"/>
+            <column name="is_deleted" type="BOOLEAN DEFAULT FALSE"/>
+            <column name="time_register" type="BIGINT"/>
+            <column name="time_update" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

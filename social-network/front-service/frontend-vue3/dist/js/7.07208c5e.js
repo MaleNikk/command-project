@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkfrontend"]=self["webpackChunkfrontend"]||[]).push([[7],{5007:function(s,n,c){c.r(n),c.d(n,{default:function(){return g}});var e=c(3396),t=c(4196);const r={class:"success-shift-email"},u=(0,e._)("img",{src:t,alt:"img.svg"},null,-1),i=[u];function f(s,n,c,t,u,f){return(0,e.wg)(),(0,e.iD)("div",r,i)}var a={name:"ShiftEmailSuccess"},o=c(89);const l=(0,o.Z)(a,[["render",f]]);var g=l},4196:function(s,n,c){s.exports=c.p+"img/success-forgot.6c3f4955.svg"}}]);
+//# sourceMappingURL=7.07208c5e.js.map

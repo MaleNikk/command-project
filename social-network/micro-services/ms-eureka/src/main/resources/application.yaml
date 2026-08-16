@@ -1,0 +1,31 @@
+server:
+  port: "${SERVICE_PORT:8778}"
+spring:
+  application:
+   name: "${SERVICE_NAME:eureka-service}"
+
+logging:
+  level:
+    root: INFO
+    org:
+      apache: INFO
+      springframework:
+        web: DEBUG
+
+eureka:
+  server:
+    enableSelfPresentation: false
+  client:
+    registerWithEureka: true
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: "http://localhost:${server.port}/eureka"
+    healthCheck:
+      enabled: true
+  instance:
+    preferIpAddress: true
+    leaseRenewalIntervalInSeconds: 10
+    leaseExpirationDurationInSeconds: 30
+    statusPageUrl: "https://localhost:${server.port}/info"
+    healthCheckUrl: "https://localhost:${server.port}/health"
+    homePageUrl: "https://localhost:${server.port}/home"

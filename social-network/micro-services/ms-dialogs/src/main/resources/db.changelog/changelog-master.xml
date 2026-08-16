@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="createTableDialog" author="dialogs_db">
+        <createTable tableName="dialog">
+            <column name="dialog_id" type="varchar(100)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="person_id_1" type="varchar(150)"/>
+            <column name="person_id_2" type="varchar(150)"/>
+            <column name="created_date" type="varchar(100)"/>
+            <column name="deleted" type="boolean"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="createTableMessage" author="dialogs_db">
+        <createTable tableName="message">
+            <column name="message_id" type="bigserial">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="dialog_id" type="varchar(100)"/>
+            <column name="message" type="varchar(500)"/>
+            <column name="author_id" type="varchar(100)"/>
+            <column name="status" type="varchar(25)"/>
+            <column name="send_date" type="varchar(100)"/>
+            <column name="update_date" type="varchar(100)"/>
+            <column name="deleted" type="boolean"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="createTableEditable" author="dialogs_db">
+        <createTable tableName="editable">
+            <column name="message_id" type="bigserial">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="dialog_id" type="varchar(100)"/>
+            <column name="message" type="varchar(500)"/>
+            <column name="author_id" type="varchar(500)"/>
+            <column name="status" type="varchar(100)"/>
+            <column name="send_date" type="varchar(100)"/>
+            <column name="update_date" type="varchar(100)"/>
+            <column name="deleted" type="boolean"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
