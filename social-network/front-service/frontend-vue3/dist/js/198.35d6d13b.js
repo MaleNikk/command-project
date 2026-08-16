@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkfrontend"]=self["webpackChunkfrontend"]||[]).push([[198],{3894:function(s,n,c){c.r(n),c.d(n,{default:function(){return f}});var e=c(3396),r=c.p+"img/success-change-password.5b861c45.svg";const a={class:"change-password-success"},u=(0,e._)("img",{src:r,alt:"img.svg"},null,-1),t=[u];function o(s,n,c,r,u,o){return(0,e.wg)(),(0,e.iD)("div",a,t)}var d={name:"ChangePasswordSuccess"},g=c(89);const i=(0,g.Z)(d,[["render",o]]);var f=i}}]);
-//# sourceMappingURL=198.35d6d13b.js.map
