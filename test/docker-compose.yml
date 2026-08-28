@@ -224,7 +224,7 @@ services:
         condition: service_started
       ms-postgres:
         condition: service_started     
-    image: "geo-service:3.0"
+    image: "geo-service:2.0"
     container_name: "ms-geo"
     restart: unless-stopped
     ports:
