@@ -1,0 +1,17 @@
+server:
+  port: 8082
+
+spring:
+  config:
+    import: "optional:file:./application.yaml"
+  application:
+    name: "ms-account"
+  notifications:
+    uri: "http://ms-gateway:8765/api/v1/notifications"
+  dialogs:
+    uri: "http://ms-gateway:8765/api/v1/dialogs"
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: "http://localhost:8761/eureka"
