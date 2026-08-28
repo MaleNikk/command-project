@@ -106,7 +106,7 @@ services:
       - social-network  
 
   frontend:
-    image: "service-front:3.0"
+    image: "nikolaykarpov/ms-front:2.0"
     container_name: frontend
     restart: unless-stopped
     ports:
@@ -224,7 +224,7 @@ services:
         condition: service_started
       ms-postgres:
         condition: service_started     
-    image: "geo-service:2.0"
+    image: "nikolaykarpov/ms-geo:2.0"
     container_name: "ms-geo"
     restart: unless-stopped
     ports:
