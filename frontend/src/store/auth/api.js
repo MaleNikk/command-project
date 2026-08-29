@@ -45,7 +45,7 @@ export default {
 
       dispatch(
         'global/alert/setAlert',
-        { status: 'success', text: 'Зарегистрирован, выполняю логин' },
+        { status: 'success', text: 'Зарегистрирован, делаю логин' },
         { root: true }
       );
     },

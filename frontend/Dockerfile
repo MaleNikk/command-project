@@ -1,12 +1,12 @@
-FROM node:lts-trixie-slim AS build
-WORKDIR /front
+FROM node:18.13.0 AS build
+WORKDIR /app
+COPY package*.json ./
 RUN yarn install
-COPY . /front/
-RUN npm install @vue/cli-service --save-dev
-RUN yarn run
+COPY . .
+RUN yarn build
 
 FROM nginx:latest AS serve
-COPY --from=build ./front/dist /usr/share/nginx/html
+COPY --from=build /app/dist /usr/share/nginx/html
 COPY ./frontnginx/server.conf /etc/nginx/conf.d/default.conf
-EXPOSE 89
+EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]

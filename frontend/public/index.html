@@ -4,12 +4,15 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
     <div style="display: none">
-      <svg xmlns="http://www.w3.org/2000/svg">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+      >
         <symbol id="icon-arrow-left" viewBox="0 0 8 14">
           <path
             d="M6 12H4v-2h2v2zm-2-2H2V8h2v2zM2 8H0V6h2v2zm2-2H2V4h2v2zm2-2H4V2h2v2zm2-2H6V0h2v2zm0 12H6v-2h2v2z"
@@ -55,6 +58,6 @@
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div id="app"></div>
-    <!-- built files will be auto-injected -->
+    <!-- built files will be auto injected -->
   </body>
 </html>

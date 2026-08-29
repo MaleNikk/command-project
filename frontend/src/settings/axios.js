@@ -1,11 +1,9 @@
 import axios from 'axios';
 import store from '@/store';
-// import jwtDecode from "jwt-decode";
+import jwtDecode from "jwt-decode";
 
 axios.defaults.headers['content-type'] = 'application/json';
 axios.defaults.withCredentials = true;
-// axios.defaults.baseURL = '/api/v1/';
-//axios.defaults.baseURL = "http://89.111.155.206:8765/api/v1/";
 axios.defaults.baseURL = "http://localhost:8765/api/v1/";
 
 

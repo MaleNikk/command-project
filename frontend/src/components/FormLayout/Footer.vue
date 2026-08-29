@@ -36,7 +36,7 @@
     </div>
 
     <span v-if="noUseContent" class="form-layout__footer-copyright">
-      © Copyright {{ year }} CONVERSATION SERVICE.
+      © Copyright {{ year }} SOCIAL NETWORK.
     </span>
   </div>
 </template>

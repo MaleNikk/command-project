@@ -3,7 +3,7 @@ import { createRouter, createWebHashHistory } from 'vue-router';
 import authRoutes from './modules/auth';
 import shiftRoutes from './modules/shift';
 import userRoutes from './modules/user';
-// import adminRoutes from './modules/admin';
+import adminRoutes from './modules/admin';
 
 const routes = [
   {
@@ -15,7 +15,7 @@ const routes = [
   ...authRoutes,
   ...shiftRoutes,
   ...userRoutes,
-  // ...adminRoutes,
+  ...adminRoutes,
 ];
 
 const router = createRouter({
