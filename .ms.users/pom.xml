@@ -10,9 +10,9 @@
 	</parent>
 
 	<groupId>social.network</groupId>
-	<artifactId>ms.users</artifactId>
+	<artifactId>application</artifactId>
 	<version>1.0.0</version>
-	<name>ms.users</name>
+	<name>.ms.users</name>
 	<description>Service tracking users</description>
 
 	<properties>
@@ -115,7 +115,7 @@
 			<groupId>org.apache.tomcat.embed</groupId>
 			<artifactId>tomcat-embed-core</artifactId>
 			<version>11.0.25</version>
-			<scope>compile</scope>
+			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>commons-lang</groupId>
@@ -207,25 +207,25 @@
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok-mapstruct-binding</artifactId>
 			<version>0.2.0</version>
-			<scope>compile</scope>
+<!--			<scope>provided</scope>-->
 		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<version>1.18.46</version>
-			<scope>compile</scope>
+<!--			<scope>provided</scope>-->
 		</dependency>
 		<dependency>
 			<groupId>org.mapstruct</groupId>
 			<artifactId>mapstruct-processor</artifactId>
 			<version>1.6.3</version>
-			<scope>compile</scope>
+<!--			<scope>provided</scope>-->
 		</dependency>
 		<dependency>
 			<groupId>org.mapstruct</groupId>
 			<artifactId>mapstruct</artifactId>
 			<version>1.6.3</version>
-			<scope>compile</scope>
+<!--			<scope>provided</scope>-->
 		</dependency>
 	</dependencies>
 

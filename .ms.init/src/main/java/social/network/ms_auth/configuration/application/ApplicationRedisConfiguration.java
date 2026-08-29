@@ -3,7 +3,6 @@ package social.network.ms_auth.configuration.application;
 import org.slf4j.event.Level;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.autoconfigure.data.redis.RedisProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisStandaloneConfiguration;
@@ -11,7 +10,7 @@ import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
 import org.springframework.data.redis.core.RedisKeyValueAdapter;
 import org.springframework.data.redis.core.convert.KeyspaceConfiguration;
 import org.springframework.data.redis.repository.configuration.EnableRedisRepositories;
-import org.springframework.lang.NonNull;
+import org.springframework.data.redis.support.collections.RedisProperties;
 import social.network.ms_auth.repository.entity.RefreshTokenJwt;
 import social.network.ms_auth.logging.ApplicationLogger;
 
@@ -42,8 +41,8 @@ public class ApplicationRedisConfiguration {
     public JedisConnectionFactory jedisConnectionFactory(RedisProperties redisProperties) {
         logger.printLog("Init redis configuration!", Level.INFO);
         RedisStandaloneConfiguration redisStandaloneConfiguration = new RedisStandaloneConfiguration();
-        redisStandaloneConfiguration.setHostName(redisProperties.getHost());
-        redisStandaloneConfiguration.setPort(redisProperties.getPort());
+        redisStandaloneConfiguration.setHostName(redisProperties.getProperty("host"));
+        redisStandaloneConfiguration.setPort(Integer.parseInt(redisProperties.getProperty("port")));
         return new JedisConnectionFactory(redisStandaloneConfiguration);
     }
 
@@ -51,7 +50,6 @@ public class ApplicationRedisConfiguration {
         private static final String REFRESH_TOKEN_KEYSPACE = "refresh_tokens";
 
         @Override
-        @NonNull
         protected Iterable<KeyspaceSettings> initialConfiguration() {
             KeyspaceSettings keyspaceSettings = new KeyspaceSettings(RefreshTokenJwt.class, REFRESH_TOKEN_KEYSPACE);
             keyspaceSettings.setTimeToLive(tokenExpiration.toMillis());
