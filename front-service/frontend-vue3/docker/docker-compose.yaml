@@ -1,9 +1,0 @@
-services:
-  mc_front:
-    build: "../"
-    image: "nikolaykarpov/ms-front:3.0"
-    container_name: "ms-front"
-    ports:
-      - 8088:80
-    extra_hosts:
-      - "localhost:host-gateway"
