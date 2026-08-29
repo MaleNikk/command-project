@@ -1,6 +1,6 @@
 import axios from 'axios';
 import store from '@/store';
-import jwtDecode from "jwt-decode";
+// import jwtDecode from "jwt-decode";
 
 axios.defaults.headers['content-type'] = 'application/json';
 axios.defaults.withCredentials = true;
